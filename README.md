@@ -1,36 +1,25 @@
-# Buke — static site
+Production notes and artist assets
 
-This repository now contains a simple static website scaffold.
+This repository now contains the artist website for BUKE.
 
-Files added:
+Changes included in this commit:
+- Added full artist biography to the About section and included a contact email.
+- Updated gallery and about photo markup to use responsive picture/webp fallbacks.
+- Updated Open Graph to point at assets/photo-1.jpg (replace with optimized image after upload).
 
-- `index.html` — landing page
-- `styles.css` — basic responsive styles
-- `script.js` — small client-side interactivity
-- `assets/logo.svg` — simple vector logo used on the site
+Images
 
-How to preview locally
+Please upload the original high-resolution images named exactly:
+- assets/photo-1.jpg  (artist portrait)
+- assets/photo-2.jpg  (logo/artwork)
 
-1. Open `index.html` in your browser (double-click) or serve locally with a static server, for example:
+I will create optimized variants (1600/800/400 and WebP) automatically once the originals are present. Alternatively, if you prefer I can upload optimized copies directly from the images you attached in chat — confirm and I will add them.
 
-   - Python 3: `python -m http.server 8000` then open http://localhost:8000
+Deployment
 
-How to publish on GitHub Pages
+A GitHub Actions workflow is present at .github/workflows/deploy.yml which will publish the repository root to the gh-pages branch on push to main. To publish the site:
+1. In repository Settings -> Pages, set Source to gh-pages branch / (root)
+2. Wait a minute for the site to become available at:
+   https://ddibamusege123.github.io/Buke/
 
-1. Go to the repository settings on GitHub -> Pages.
-2. Select the `main` branch and `/ (root)` folder, then Save.
-3. After a minute the site will be available at:
-
-   `https://ddibamusege123.github.io/Buke`
-
-Add your own images
-
-- Put your photos (for example the ones you attached) into the `assets/` folder and replace the files: `photo-1-placeholder.jpg` and `photo-2-placeholder.jpg` (or update `index.html` image `src` attributes to match your filenames).
-
-Next steps I can do for you
-
-- Add your provided images into the repository (upload them) so the gallery shows your real photos.
-- Improve visual design, add pages for tracks, events, or a contact backend.
-- Configure a deploy action if you prefer automatic deployments or a custom domain.
-
-If you want me to upload the two images you provided, please confirm and I will add them to `assets/` and update the gallery to use them.
+If you want me to run the optimization and upload the image files now, reply "Upload images now" and I will proceed to add optimized variants and push them.

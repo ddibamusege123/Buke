@@ -4,16 +4,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Buke — Piano & Music</title>
-    <meta name="description" content="Buke — Musician portfolio and simple landing page." />
+    <meta name="description" content="Buke — Musician portfolio and release landing page. Music, photos, and contact." />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Buke — Piano & Music" />
+    <meta property="og:description" content="Buke — Musician portfolio and release landing page." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ddibamusege123.github.io/Buke/" />
+    <meta property="og:image" content="assets/photo-1.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/logo.svg" />
+
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Basic structured data for the artist using JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Buke",
+        "url": "https://ddibamusege123.github.io/Buke/",
+        "description": "Buke — Piano & Music. Official artist site.",
+        "image": "https://ddibamusege123.github.io/Buke/assets/photo-1.jpg"
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" role="banner">
       <div class="container header-inner">
         <a class="brand" href="/">
           <img src="assets/logo.svg" alt="Buke logo" class="logo" />
         </a>
-        <nav class="nav" id="site-nav">
+        <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
           <button class="nav-toggle" id="nav-toggle" aria-expanded="false">☰</button>
           <ul class="nav-list" id="nav-list">
             <li><a href="#about">About</a></li>
@@ -25,10 +50,10 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="container">
-          <h1>Buke</h1>
-          <p class="lead">A clean, responsive landing page for your music and portfolio.</p>
+          <h1 id="hero-title">Buke</h1>
+          <p class="lead">Piano • Composition • Live performance — official artist page.</p>
           <p><a class="btn" href="#contact">Get in touch</a></p>
         </div>
       </section>
@@ -36,26 +61,53 @@
       <section id="about" class="section about">
         <div class="container">
           <h2>About</h2>
-          <p>This is a starter website for "Buke" — put your musician bio, services, upcoming events, and tracks here.
-          Replace the placeholder content and images in the <code>assets/</code> folder with your own.</p>
+          <div class="about-grid">
+            <div class="about-bio">
+              <p>BUKE — Artist Biography</p>
+              <p><strong>Contact:</strong> <a href="mailto:Bukelive@gmail.com">Bukelive@gmail.com</a></p>
+              <p>BUKE is a Ugandan-born producer, recording pianist, and alternative music artist whose work dissolves the line between composition and emotion. Short for Bukenya, BUKE crafts sonic landscapes that live between silence and spirit—evocative, layered, and deeply immersive.</p>
+              <p>His sound merges elements of ambient, soul, experimental African rhythm, and cinematic storytelling. At the heart of BUKE’s artistry lies the piano—not just as an instrument, but as a vessel for memory, mystery, and movement. Every chord feels intentional. Every pause, sacred.</p>
+              <p>Growing up in a rich musical environment, BUKE developed a sensitivity to both silence and sound. His journey began as a pianist accompanying voices and bands but evolved into a deeper calling—producing genre-bending music that channels mood, shadow, and depth. His process is rooted in solitude, spirituality, and honest expression. Whether producing for others or performing live, BUKE invites listeners into intimate spaces—spaces where sound becomes ritual and emotion finds resonance. His music speaks to those searching for depth, healing, and truth. He’s here to evoke.</p>
+              <p>BUKE is currently preparing for a series of live performances, building toward his upcoming solo project. From studio to stage, he continues to shape his unique sonic fingerprint—one that resists categorization and leaves a lasting spiritual imprint.</p>
+              <p>© 2025 BUKE. All rights reserved.</p>
+            </div>
+            <div class="about-photo">
+              <picture>
+                <source type="image/webp" srcset="assets/photo-1.webp 1600w, assets/photo-1@800.webp 800w, assets/photo-1@400.webp 400w" sizes="(max-width: 720px) 90vw, 480px">
+                <img src="assets/photo-1.jpg" alt="Artist portrait of Buke" loading="lazy" width="800" height="533">
+              </picture>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="gallery" class="section gallery">
+      <section id="gallery" class="section gallery" aria-labelledby="gallery-title">
         <div class="container">
-          <h2>Gallery</h2>
+          <h2 id="gallery-title">Gallery</h2>
           <div class="grid">
-            <div class="card"><img src="assets/photo-1-placeholder.jpg" alt="Profile placeholder"/></div>
-            <div class="card"><img src="assets/photo-2-placeholder.jpg" alt="Logo placeholder"/></div>
+
+            <div class="card">
+              <picture>
+                <source type="image/webp" srcset="assets/photo-1.webp 1600w, assets/photo-1@800.webp 800w, assets/photo-1@400.webp 400w" sizes="(max-width: 720px) 90vw, 480px">
+                <img src="assets/photo-1.jpg" alt="Artist portrait of Buke" loading="lazy" width="1200" height="800">
+              </picture>
+            </div>
+
+            <div class="card">
+              <picture>
+                <source type="image/webp" srcset="assets/photo-2.webp 1600w, assets/photo-2@800.webp 800w, assets/photo-2@400.webp 400w" sizes="(max-width: 720px) 90vw, 480px">
+                <img src="assets/photo-2.jpg" alt="Buke logo artwork" loading="lazy" width="1200" height="1200">
+              </picture>
+            </div>
+
           </div>
-          <p class="muted">To use your own images: add image files to the <code>assets/</code> folder and update the <code>src</code> attributes in <code>index.html</code>.</p>
         </div>
       </section>
 
       <section id="contact" class="section contact">
         <div class="container">
           <h2>Contact</h2>
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form" aria-label="Contact form">
             <label>
               Name
               <input name="name" type="text" required />
@@ -75,7 +127,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="container">
         <p>© <span id="year"></span> Buke — Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
         <p><a href="https://github.com/ddibamusege123/Buke">View source on GitHub</a></p>
