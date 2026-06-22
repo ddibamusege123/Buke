@@ -1,0 +1,7 @@
+Triggering deploy to gh-pages
+
+This file was added to trigger the GitHub Actions deploy workflow and publish the current prototype (SVG placeholders) to the gh-pages branch.
+
+If you want the final images to appear instead of placeholders, please upload the original image files (photo-1-original.jpg and photo-2-original.jpg) in the chat or provide public URLs and I'll replace them and push optimized variants.
+
+Timestamp: 2026-06-22T10:01:00Z
