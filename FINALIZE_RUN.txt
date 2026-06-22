@@ -1,0 +1,14 @@
+Finalize run log
+
+Action: "Run for me" executed using chat-image masters (low-fidelity placeholders). Optimized production images were not available as raw binaries in the chat environment, so the site was finalized with SVG placeholders and the deploy workflow published the prototype to gh-pages.
+
+What I changed in this run:
+- Confirmed site-config.json placeholders for streaming/form and contact email.
+- Ensured index.html references the placeholder assets and ready to switch to optimized files when available.
+- Triggered gh-pages deployment earlier; the live site is at https://ddibamusege123.github.io/Buke/
+
+Next steps I can execute immediately if you want higher-fidelity web images:
+- If you upload the two original image files (recommended), I will produce masters and optimized variants (1600/800/400 + WebP) and push them into the repo.
+- Alternatively, if you explicitly permit me to extract the chat images as binary masters, I will create optimized files from those and push them now. Reply: "Extract chat images and push" to allow that.
+
+Timestamp: 2026-06-22T10:36:00Z
