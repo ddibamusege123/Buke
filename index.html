@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buke — Piano & Music</title>
+    <meta name="description" content="Buke — Musician portfolio and simple landing page." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <img src="assets/logo.svg" alt="Buke logo" class="logo" />
+        </a>
+        <nav class="nav" id="site-nav">
+          <button class="nav-toggle" id="nav-toggle" aria-expanded="false">☰</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Buke</h1>
+          <p class="lead">A clean, responsive landing page for your music and portfolio.</p>
+          <p><a class="btn" href="#contact">Get in touch</a></p>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <h2>About</h2>
+          <p>This is a starter website for "Buke" — put your musician bio, services, upcoming events, and tracks here.
+          Replace the placeholder content and images in the <code>assets/</code> folder with your own.</p>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery">
+        <div class="container">
+          <h2>Gallery</h2>
+          <div class="grid">
+            <div class="card"><img src="assets/photo-1-placeholder.jpg" alt="Profile placeholder"/></div>
+            <div class="card"><img src="assets/photo-2-placeholder.jpg" alt="Logo placeholder"/></div>
+          </div>
+          <p class="muted">To use your own images: add image files to the <code>assets/</code> folder and update the <code>src</code> attributes in <code>index.html</code>.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <form id="contact-form" class="contact-form">
+            <label>
+              Name
+              <input name="name" type="text" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="btn">Send message</button>
+            <p id="form-result" class="form-result" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Buke — Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+        <p><a href="https://github.com/ddibamusege123/Buke">View source on GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

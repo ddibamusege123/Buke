@@ -1,0 +1,38 @@
+/* styles.css — simple responsive styles */
+:root{
+  --bg:#0b0b0b;
+  --card:#0f0f10;
+  --accent:#e6b88a;
+  --muted:#9a9a9a;
+  --text:#f5f5f5;
+  --max-width:1100px;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#000,#0b0b0b);color:var(--text);line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--text)}
+.logo{height:56px}
+.nav{position:relative}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,0.06);padding:.5rem;border-radius:6px;color:var(--text)}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav-list a{color:var(--text);text-decoration:none}
+.hero{padding:5rem 0;text-align:center}
+.hero h1{font-size:3rem;margin:.2rem 0}
+.lead{color:var(--muted);font-size:1.1rem}
+.btn{display:inline-block;background:var(--accent);color:#000;padding:.65rem 1rem;border-radius:6px;text-decoration:none;font-weight:600}
+.section{padding:3rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.1));padding:1rem;border-radius:var(--radius);display:flex;align-items:center;justify-content:center}
+.card img{max-width:100%;height:auto;border-radius:6px}
+.contact-form{display:grid;gap:.75rem;max-width:640px}
+.contact-form label{display:block}
+.contact-form input, .contact-form textarea{width:100%;padding:.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+.form-result{margin-top:.5rem;color:var(--accent)}
+.site-footer{padding:2rem 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}n
+@media (max-width:720px){
+  .nav-list{display:none;position:absolute;right:0;top:60px;background:var(--card);padding:.5rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+  .nav-toggle{display:inline-block}
+}
