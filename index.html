@@ -3,68 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Buke — Piano & Music (Prototype)</title>
-    <meta name="description" content="BUKE — Musician portfolio and release landing page prototype. Music, photos, and contact." />
+    <title>Buke — Piano & Music</title>
+    <meta name="description" content="Buke — Musician portfolio and release landing page. Music, photos, and contact." />
+
+    <!-- Open Graph / Social -->
     <meta property="og:title" content="Buke — Piano & Music" />
-    <meta property="og:description" content="BUKE — Musician portfolio and release landing page prototype." />
+    <meta property="og:description" content="Buke — Musician portfolio and release landing page." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://ddibamusege123.github.io/Buke/" />
+    <meta property="og:image" content="assets/photo-1.jpg" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <style>
-      :root{
-        --bg:#0b0b0b;
-        --card:#0f0f10;
-        --accent:#e6b88a;
-        --muted:#9a9a9a;
-        --text:#f5f5f5;
-        --max-width:1100px;
-        --radius:8px;
+
+    <link rel="icon" href="assets/logo.svg" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Basic structured data for the artist using JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Buke",
+        "url": "https://ddibamusege123.github.io/Buke/",
+        "description": "Buke — Piano & Music. Official artist site.",
+        "image": "https://ddibamusege123.github.io/Buke/assets/photo-1.jpg"
       }
-      *{box-sizing:border-box}
-      html,body{height:100%}
-      body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#000,#0b0b0b);color:var(--text);line-height:1.5}
-      .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
-      .header-inner{display:flex;align-items:center;justify-content:space-between}
-      .brand{display:flex;align-items:center;text-decoration:none;color:var(--text)}
-      .logo{height:56px}
-      .nav{position:relative}
-      .nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,0.06);padding:.5rem;border-radius:6px;color:var(--text)}
-      .nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
-      .nav-list a{color:var(--text);text-decoration:none}
-      .hero{padding:4rem 0;text-align:center}
-      .hero h1{font-size:3rem;margin:.2rem 0;letter-spacing:0.02em}
-      .lead{color:var(--muted);font-size:1.1rem}
-      .btn{display:inline-block;background:var(--accent);color:#000;padding:.65rem 1rem;border-radius:6px;text-decoration:none;font-weight:600}
-      .section{padding:2.5rem 0}
-      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-      .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.1));padding:1rem;border-radius:var(--radius);display:flex;align-items:center;justify-content:center}
-      .card img, .card svg{max-width:100%;height:auto;border-radius:6px}
-      .contact-form{display:grid;gap:.75rem;max-width:640px}
-      .contact-form label{display:block}
-      .contact-form input, .contact-form textarea{width:100%;padding:.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
-      .form-result{margin-top:.5rem;color:var(--accent)}
-      .site-footer{padding:2rem 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
-      .streaming-links{margin:1rem 0;display:flex;gap:.5rem;justify-content:center}
-      .streaming-links .stream{background:var(--accent);color:#000;padding:.45rem .65rem;border-radius:6px;text-decoration:none;font-weight:700}
-      .about-grid{display:grid;grid-template-columns:1fr 360px;gap:1.25rem;align-items:start}
-      .about-photo svg{width:100%;height:auto;border-radius:8px}
-      @media (max-width:920px){.about-grid{grid-template-columns:1fr}}
-      @media (max-width:720px){
-        .nav-list{display:none;position:absolute;right:0;top:60px;background:var(--card);padding:.5rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-        .nav-toggle{display:inline-block}
-        .hero h1{font-size:2.4rem}
-      }
-    </style>
+    </script>
   </head>
   <body>
     <header class="site-header" role="banner">
       <div class="container header-inner">
-        <a class="brand" href="#">
-          <!-- Inline logo SVG -->
-          <svg class="logo" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BUKE logo">
-            <rect width="160" height="40" rx="6" fill="black"/>
-            <text x="12" y="28" font-family="sans-serif" font-weight="700" font-size="24" fill="#e6b88a">BUKE</text>
-          </svg>
+        <a class="brand" href="/">
+          <img src="assets/logo.svg" alt="Buke logo" class="logo" />
         </a>
         <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
           <button class="nav-toggle" id="nav-toggle" aria-expanded="false">☰</button>
@@ -81,12 +53,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="container">
           <h1 id="hero-title">Buke</h1>
-          <p class="lead">Piano • Composition • Live performance — official artist prototype.</p>
-          <div id="streaming-links" class="streaming-links">
-            <a class="stream" href="#" target="_blank" rel="noopener">Spotify</a>
-            <a class="stream" href="#" target="_blank" rel="noopener">YouTube</a>
-            <a class="stream" href="#" target="_blank" rel="noopener">Apple Music</a>
-          </div>
+          <p class="lead">Piano • Composition • Live performance — official artist page.</p>
           <p><a class="btn" href="#contact">Get in touch</a></p>
         </div>
       </section>
@@ -96,33 +63,20 @@
           <h2>About</h2>
           <div class="about-grid">
             <div class="about-bio">
-              <p><strong>BUKE — Artist Biography</strong></p>
+              <p>BUKE — Artist Biography</p>
               <p><strong>Contact:</strong> <a href="mailto:Bukelive@gmail.com">Bukelive@gmail.com</a></p>
-              <p>BUKE is a Ugandan-born producer, recording pianist, and alternative music artist whose work dissolves the line between composition and emotion. Short for Bukenya, BUKE crafts sonic landscapes that live between silence and spirit—evocative, layered, and deeply immersive.</p>
-              <p>His sound merges elements of ambient, soul, experimental African rhythm, and cinematic storytelling. At the heart of BUKE’s artistry lies the piano—not just as an instrument, but as a vessel for memory, mystery, and movement. Every chord feels intentional. Every pause, sacred.</p>
-              <p>Growing up in a rich musical environment, BUKE developed a sensitivity to both silence and sound. His journey began as a pianist accompanying voices and bands but evolved into a deeper calling—producing genre-bending music that channels mood, shadow, and depth. His process is rooted in solitude, spirituality, and honest expression. Whether producing for others or performing live, BUKE invites listeners into intimate spaces—spaces where sound becomes ritual and emotion finds resonance. His music speaks to those searching for depth, healing, and truth. He’s here to evoke.</p>
-              <p>BUKE is currently preparing for a series of live performances, building toward his upcoming solo project. From studio to stage, he continues to shape his unique sonic fingerprint—one that resists categorization and leaves a lasting spiritual imprint.</p>
+              <p>BUKE is a Ugandan-born producer, recording pianist, and alternative music artist whose work dissolves the line between composition and emotion. Short for Bukenya, BUKE crafts soni[...]</p>
+              <p>His sound merges elements of ambient, soul, experimental African rhythm, and cinematic storytelling. At the heart of BUKE’s artistry lies the piano—not just as an instrument, [...]</p>
+              <p>Growing up in a rich musical environment, BUKE developed a sensitivity to both silence and sound. His journey began as a pianist accompanying voices and bands but evolved into a d[...]</p>
+              <p>BUKE is currently preparing for a series of live performances, building toward his upcoming solo project. From studio to stage, he continues to shape his unique sonic fingerprint�[...]</p>
               <p>© 2025 BUKE. All rights reserved.</p>
             </div>
 
-            <div class="about-photo" aria-hidden="true">
-              <!-- Inline placeholder SVG portrait -->
-              <svg viewBox="0 0 1600 1067" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portrait placeholder">
-                <defs>
-                  <linearGradient id="g" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#20140f" />
-                    <stop offset="100%" stop-color="#000" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#g)" />
-                <g transform="translate(120,80)" fill="#e6b88a" opacity="0.95">
-                  <rect x="0" y="0" width="320" height="480" rx="10" />
-                  <rect x="28" y="36" width="56" height="360" fill="#0b0b0b"/>
-                  <rect x="108" y="36" width="56" height="360" fill="#0b0b0b"/>
-                  <rect x="188" y="36" width="56" height="360" fill="#0b0b0b"/>
-                </g>
-                <text x="520" y="580" font-family="sans-serif" font-size="120" fill="#e6b88a" font-weight="700">BUKE</text>
-              </svg>
+            <div class="about-photo">
+              <picture>
+                <source type="image/webp" srcset="assets/photo-1.webp 1600w, assets/photo-1@800.webp 800w, assets/photo-1@400.webp 400w" sizes="(max-width: 720px) 90vw, 480px">
+                <img src="assets/photo-1.jpg" alt="Artist portrait of Buke" loading="lazy" width="800" height="533">
+              </picture>
             </div>
           </div>
         </div>
@@ -133,37 +87,18 @@
           <h2 id="gallery-title">Gallery</h2>
           <div class="grid">
 
-            <div class="card" aria-hidden="true" title="portrait placeholder">
-              <!-- Portrait placeholder (same as above) -->
-              <svg viewBox="0 0 1600 1067" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gallery portrait placeholder">
-                <defs>
-                  <linearGradient id="g2" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#20140f" />
-                    <stop offset="100%" stop-color="#000" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#g2)" />
-                <g transform="translate(120,80)" fill="#e6b88a" opacity="0.95">
-                  <rect x="0" y="0" width="320" height="480" rx="10" />
-                  <rect x="28" y="36" width="56" height="360" fill="#0b0b0b"/>
-                  <rect x="108" y="36" width="56" height="360" fill="#0b0b0b"/>
-                  <rect x="188" y="36" width="56" height="360" fill="#0b0b0b"/>
-                </g>
-                <text x="520" y="580" font-family="sans-serif" font-size="120" fill="#e6b88a" font-weight="700">BUKE</text>
-              </svg>
+            <div class="card">
+              <picture>
+                <source type="image/webp" srcset="assets/photo-1.webp 1600w, assets/photo-1@800.webp 800w, assets/photo-1@400.webp 400w" sizes="(max-width: 720px) 90vw, 480px">
+                <img src="assets/photo-1.jpg" alt="Artist portrait of Buke" loading="lazy" width="1200" height="800">
+              </picture>
             </div>
 
-            <div class="card" aria-hidden="true" title="logo placeholder">
-              <!-- Logo artwork placeholder -->
-              <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder">
-                <rect width="100%" height="100%" fill="#000" />
-                <g transform="translate(370,120)">
-                  <rect x="0" y="0" width="160" height="360" fill="#e6b88a" opacity="0.9" />
-                  <rect x="48" y="0" width="32" height="360" fill="#0b0b0b"/>
-                  <rect x="96" y="0" width="32" height="360" fill="#0b0b0b"/>
-                </g>
-                <text x="600" y="820" font-family="sans-serif" font-size="220" fill="#e6b88a" text-anchor="middle" font-weight="700">BUKE</text>
-              </svg>
+            <div class="card">
+              <picture>
+                <source type="image/webp" srcset="assets/photo-2.webp 1600w, assets/photo-2@800.webp 800w, assets/photo-2@400.webp 400w" sizes="(max-width: 720px) 90vw, 480px">
+                <img src="assets/photo-2.jpg" alt="Buke logo artwork" loading="lazy" width="1200" height="1200">
+              </picture>
             </div>
 
           </div>
@@ -195,8 +130,8 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <p>© <span id="year"></span> Buke — Built with HTML, CSS, and JavaScript. Prototype download.</p>
-        <p><a href="https://github.com/ddibamusege123/Buke" target="_blank" rel="noopener">View source on GitHub</a></p>
+        <p>© <span id="year"></span> Buke — Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+        <p><a href="https://github.com/ddibamusege123/Buke">View source on GitHub</a></p>
       </div>
     </footer>
 
